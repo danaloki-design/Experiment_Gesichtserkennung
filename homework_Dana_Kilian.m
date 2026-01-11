@@ -22,7 +22,7 @@ nonfamousFiles = dir('Non-famous/*.jpg');
 length(famousFiles)
 length(nonfamousFiles) 
 
-nTrials = 50 ;  % Beispielanzahl, kann auf 50 geändert werden
+nTrials = 50;  
 RT = zeros(nTrials,1);
 
 % Zähl-Arrays für Maximal 2 Wiederholungen pro Bild
@@ -58,7 +58,7 @@ for t = 1:nTrials
     Screen('Flip', myWindow);
     WaitSecs(2);
 
-    %  Mask/Noisy Square 
+    %Mask/Noisy Square 
     noise = rand(200,200)*255;
     Screen('FillRect', myWindow, gray);
     noiseTex = Screen('MakeTexture', myWindow, noise);
